@@ -24,7 +24,17 @@ public class gambler {
 		System.out.println("Total stack of gambler: "+stack);
 		System.out.println("Gambler betting Price: "+bet);
 		
-	
+		Random betting = new Random();
+		int bet_1 = betting.nextInt()%2;
+		
+		if(bet_1<0.5) {
+			System.out.println("congratulation You win the bet");
+			System.out.println("Your total stack = "+(stack+bet));
+		}else {
+			System.out.println("sorry You lose the bet....Better Luck next Time");
+			System.out.println("Your total stack = "+(stack-bet));
+		}
+
 	}
 
 }
