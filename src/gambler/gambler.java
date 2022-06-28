@@ -34,6 +34,21 @@ public class gambler {
 			System.out.println("sorry You lose the bet....Better Luck next Time");
 			System.out.println("Your total stack = "+(stack-bet));
 		}
+		
+		int cash = stack;
+		int bets = 0;
+		int wins = 0;
+		
+		while (cash>0 && cash < bet) {
+			bets++;
+			
+			if(Math.random()< 0.5)
+				cash++;
+			else 
+				cash--;
+		} if(cash == bet) wins++;
+		
+		System.out.println(wins);
 
 	}
 
